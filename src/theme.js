@@ -88,3 +88,11 @@ export default theme;
 // top iPhone and Android phones: up to 420×800
 // mid-range iPhone and Android phones: 360×640 to 375×800
 // older iPhone and Android phones: down to 320×500
+
+// Heading 1 – 6rem / 6rem
+// Heading 2 – 3.75rem / 3.75rem
+// Heading 3 – 3rem / 3.25rem
+// Heading 4 – 2.25rem / 2.5rem
+// Heading 5 – 1.5rem / 2rem
+// Heading 6 – 1.25rem / 2rem
+// Body Text – 1rem / 1.5rem
