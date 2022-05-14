@@ -60,7 +60,13 @@ const theme = extendTheme({
     wider: '0.05em',
     widest: '0.1em',
   },
-  breakpoints: ['420px', '767px', '768px', '1365px'],
+  breakpoints: {
+    sm: '420px',
+    md: '768px',
+    lg: '960px',
+    xl: '1200px',
+    '2xl': '1536px',
+  },
 });
 
 export default theme;

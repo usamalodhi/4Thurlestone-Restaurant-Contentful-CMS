@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 const NavLinks = () => {
   const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
   return (
-    <Box as='nav'>
+    <Box as='nav' aria-label='Site Menu'>
       <UnorderedList listStyleType='none'>
         <Flex style={{ flexDirection: isLargerThan600 ? 'row' : 'column' }}>
           <ListItem>
