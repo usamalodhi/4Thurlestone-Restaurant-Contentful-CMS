@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Link } from 'gatsby';
 
 const Logo = () => {
-  return <Box>Logo</Box>;
+  return <Link to='/'>4 THURLESTONE</Link>;
 };
 
 export default Logo;

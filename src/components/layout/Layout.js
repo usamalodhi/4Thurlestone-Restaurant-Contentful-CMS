@@ -1,6 +1,6 @@
 import React from 'react';
 import { Location } from '@reach/router';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import Banner from '../banner/Banner';

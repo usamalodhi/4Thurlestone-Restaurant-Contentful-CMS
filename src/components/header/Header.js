@@ -1,19 +1,25 @@
 import React from 'react';
-import { Box, useMediaQuery } from '@chakra-ui/react';
-import NavLinks from './NavLinks';
-import NavDrawer from './NavAccordian';
+import { Box, useMediaQuery, Flex } from '@chakra-ui/react';
+import NavLinks from './NavBar';
+import NavDrawer from './NavDrawer';
 
 import Logo from './Logo';
 
 const Header = () => {
   const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
-
   return (
-    <Box as='header' border='2px solid black'>
-      <Logo />
-      {isLargerThan600 ? <NavLinks /> : <NavDrawer />}
-    </Box>
+    <Flex
+      background='#232221'
+      color='white'
+      alignItems='center'
+      justifyContent='space-between'
+      as='header'
+    >
+      <Box>
+        <Logo />
+      </Box>
+      <Box>{isLargerThan600 ? <NavLinks /> : <NavDrawer />}</Box>
+    </Flex>
   );
 };
-
 export default Header;

@@ -1,37 +1,32 @@
 import React from 'react';
-import { Box, Text, UnorderedList, ListItem, Flex, Image } from '@chakra-ui/react';
-import socialMediaIcons from '../../images';
+import { Box, Grid, Flex } from '@chakra-ui/react';
+import FollowSocial from '../abstract/FollowSocial';
+import OpeningHours from '../abstract/OpeningHours';
+import Name_Address from '../abstract/Name_Address';
 
 const Footer = () => {
   return (
-    <Box as='footer' border='2px solid orange'>
-      <Box border='1px solid blue'>
-        <Text as='p'>Cafe: Daily 7am-5pm</Text>
-        <Text as='p'>Restaurant: Fri/Sat 6pm-11pm</Text>
-      </Box>
-      <Box>
-        <Text as='h2'>4 Thurlestone</Text>
-        <Text as='p'>4 Thurlestone Parade, Shepperton, TW17 9AR</Text>
-      </Box>
-      <Box>
-        <Box>
-          <Text>Follow Us</Text>
-        </Box>
-        <Box background='black' as='nav' aria-label='Social Media Links'>
-          <UnorderedList listStyleType='none'>
-            <Flex direction='row'>
-              {socialMediaIcons.map(({ id, icon, url }) => (
-                <ListItem key={id}>
-                  <a href={url} target='_blank' rel='noopener noreferrer'>
-                    <Image src={icon} />
-                  </a>
-                </ListItem>
-              ))}
-            </Flex>
-          </UnorderedList>
-        </Box>
-      </Box>
-    </Box>
+    <Grid
+      background='#272625'
+      color='white'
+      as='footer'
+      gridTemplateColumns={{
+        base: '1fr 1fr 1fr',
+        sm: '1fr 1fr 1fr',
+      }}
+      gridTemplateRows={{
+        base: 'min-content',
+        sm: 'min-content',
+      }}
+      gridTemplateAreas={{
+        base: `'BoxA BoxB BoxC'`,
+        sm: `'BoxA BoxB BoxC'`,
+      }}
+    >
+      <OpeningHours />
+      <Name_Address />
+      <FollowSocial />
+    </Grid>
   );
 };
 

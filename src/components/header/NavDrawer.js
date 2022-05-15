@@ -1,9 +1,8 @@
 import React from 'react';
-import NavLinks from './NavLinks';
+import NavLinks from './NavBar';
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
