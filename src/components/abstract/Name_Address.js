@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, Flex, Divider } from '@chakra-ui/react';
 
-const Name_Address = () => {
+const NameAddress = () => {
   return (
     <Flex gridArea='BoxB' direction='column' alignItems='center' border='2px solid white'>
       <Text as='h2'>4 THURLESTONE</Text>
@@ -11,4 +11,4 @@ const Name_Address = () => {
   );
 };
 
-export default Name_Address;
+export default NameAddress;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text, UnorderedList, ListItem, Flex, Image } from '@chakra-ui/react';
+import { Box, UnorderedList, ListItem, Flex, Image } from '@chakra-ui/react';
 import socialMediaIcons from '../../images';
 
 const FollowSocial = () => {

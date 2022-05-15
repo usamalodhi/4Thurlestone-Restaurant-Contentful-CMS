@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box, Grid, Flex } from '@chakra-ui/react';
+import { Grid } from '@chakra-ui/react';
 import FollowSocial from '../abstract/FollowSocial';
 import OpeningHours from '../abstract/OpeningHours';
-import Name_Address from '../abstract/Name_Address';
+import NameAddress from '../abstract/Name_Address';
 
 const Footer = () => {
   return (
@@ -24,7 +24,7 @@ const Footer = () => {
       }}
     >
       <OpeningHours />
-      <Name_Address />
+      <NameAddress />
       <FollowSocial />
     </Grid>
   );

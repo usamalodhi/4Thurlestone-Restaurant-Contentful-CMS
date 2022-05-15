@@ -1,38 +1,33 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
+import { BgImage } from 'gbimage-bridge';
 
-const IndexPage = () => {
-  return <h1>Context goes here</h1>;
+const IndexPage = ({ data }) => {
+  const image = getImage(data.allContentfulIndexPage.nodes[0].heroImageIndex);
+  const { cafeHours, restaurantHours } = data.allContentfulIndexPage.nodes[0];
+  return (
+    <BgImage style={{ minHeight: '100vh' }} image={image}>
+      <main>
+        <h1>{cafeHours}</h1>
+        <h1>{restaurantHours}</h1>
+      </main>
+    </BgImage>
+  );
 };
 
-// const IndexPage = ({ data }) => {
-//   console.log(data);
-//   return (
-//     <main>
-//       <h1>Index Page</h1>
-//       <p>{data.allContentfulIndexPage.nodes[0].cafeHours}</p>
-//       <img
-//         src={data.allContentfulIndexPage.nodes[0].heroImageIndex.gatsbyImage.images.fallback.src}
-//         style={{
-//           width: 300,
-//           height: 'auto',
-//         }}
-//       />
-//     </main>
-//   );
-// };
-
-// export const data = graphql`
-//   {
-//     allContentfulIndexPage {
-//       nodes {
-//         heroImageIndex {
-//           gatsbyImage(layout: FULL_WIDTH, height: 100)
-//         }
-//         cafeHours
-//       }
-//     }
-//   }
-// `;
+export const data = graphql`
+  {
+    allContentfulIndexPage {
+      nodes {
+        cafeHours
+        restaurantHours
+        heroImageIndex {
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
