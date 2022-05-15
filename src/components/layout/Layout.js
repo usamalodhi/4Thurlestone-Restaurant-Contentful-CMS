@@ -3,7 +3,7 @@ import { Location } from '@reach/router';
 import { Box, Flex } from '@chakra-ui/react';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
-import Banner from '../banner/Banner';
+import BannerBox from '../banner/BannerBox';
 
 const Layout = ({ children }) => {
   return (
@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
       <Location>
         {({ location }) => {
           if (location.pathname !== '/') {
-            return <Banner />;
+            return <BannerBox />;
           }
         }}
       </Location>
