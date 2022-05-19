@@ -6,16 +6,20 @@ import Footer from '../footer/Footer';
 import BannerBox from '../banner/BannerBox';
 
 const Layout = ({ children }) => {
+  const displayBannerBox = (
+    <Location>
+      {({ location }) => {
+        if (location.pathname !== '/') {
+          return <BannerBox />;
+        }
+      }}
+    </Location>
+  );
+
   return (
     <Flex h='100vh' direction='column'>
       <Header />
-      <Location>
-        {({ location }) => {
-          if (location.pathname !== '/') {
-            return <BannerBox />;
-          }
-        }}
-      </Location>
+      {displayBannerBox}
       <Box as='main' flex='1' border='2px solid black'>
         {children}
       </Box>
