@@ -1,3 +1,4 @@
+import 'focus-visible/dist/focus-visible';
 import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
 import Layout from './components/layout/Layout';
