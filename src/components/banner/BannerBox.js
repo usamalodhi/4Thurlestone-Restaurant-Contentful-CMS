@@ -21,6 +21,13 @@ const BannerBox = () => {
           }
         }
       }
+      allContentfulMenuPage {
+        nodes {
+          bannerImage {
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+          }
+        }
+      }
       allContentfulContactPage {
         nodes {
           bannerImage {
@@ -38,11 +45,9 @@ const BannerBox = () => {
     }
   `);
 
-  console.log('here', data);
-
   const location = useLocation();
   const aboutBannerImage = getImage(data.allContentfulAboutPage.nodes[0].bannerImage);
-  // const menuBannerImage = getImage(data.allContentfulMenuPage.nodes[0].bannerImage);
+  const menuBannerImage = getImage(data.allContentfulMenuPage.nodes[0].bannerImage);
   const contactBannerImage = getImage(data.allContentfulContactPage.nodes[0].bannerImage);
   const blogBannerImage = getImage(data.allContentfulBlogPage.nodes[0].bannerImage);
 
@@ -50,8 +55,8 @@ const BannerBox = () => {
     switch (location.pathname) {
       case '/about':
         return aboutBannerImage;
-      // case '/menu':
-      //   return menuBannerImage;
+      case '/menu':
+        return menuBannerImage;
       case '/contact':
         return contactBannerImage;
       case '/blog':
@@ -64,7 +69,7 @@ const BannerBox = () => {
   return (
     <BgImage image={switchBannerImage()} alt='test'>
       <Flex color='white'>
-        <Center w='100vw' h='50vh'>
+        <Center w='100vw' h='100vh'>
           <Box>
             <BannerLabel />
           </Box>
