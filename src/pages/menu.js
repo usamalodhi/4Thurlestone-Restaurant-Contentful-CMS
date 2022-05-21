@@ -1,16 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Tabs, TabList, TabPanels, Tab, TabPanel, List, ListItem } from '@chakra-ui/react';
-import { renderRichText } from 'gatsby-source-contentful/rich-text';
 
 const MenuPage = ({ data }) => {
   const teaMenu = data.tea.nodes;
   const coffeeMenu = data.coffee.nodes;
   const dailySpecialsMenu = data.dailySpecials.nodes;
   const dessertsMenu = data.desserts.nodes;
-  const setMenu = renderRichText(data.allContentfulMenuPage.nodes[0].setMenu);
 
-  console.log(setMenu);
   return (
     <>
       <Tabs isLazy isFitted variant='enclosed'>
@@ -104,13 +101,6 @@ export const data = graphql`
     ) {
       nodes {
         ...menuData
-      }
-    }
-    allContentfulMenuPage {
-      nodes {
-        setMenu {
-          raw
-        }
       }
     }
   }
