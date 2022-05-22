@@ -1,14 +1,9 @@
-// location.pathname === '/about';
-// location.pathname === '/menu';
-// location.pathname === '/contact';
-// location.pathname === '/blog';
-
 import React from 'react';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
-import { Box, Flex, Center } from '@chakra-ui/react';
+import { Box, Center } from '@chakra-ui/react';
 import BannerLabel from './BannerLabel';
 
 const BannerBox = () => {
@@ -66,15 +61,26 @@ const BannerBox = () => {
     }
   };
 
+  const switchBannerImageAlt = () => {
+    switch (location.pathname) {
+      case '/about':
+        return 'About 4 Thurelstone, Thurlestone Parade, Shepperton';
+      case '/menu':
+        return 'Menu 4 Thurelstone, Taking inspiration from British and European cultures as well as local favourites';
+      case '/contact':
+        return 'Contact 4 Thurelstone, for those in search of location, direction, or general and business enquiries';
+      case '/blog':
+        return 'Blog 4 Thurelstone, read our latest news and announcements';
+      default:
+        console.log('error - BannerBox Image');
+    }
+  };
+
   return (
-    <BgImage image={switchBannerImage()} alt='test'>
-      <Flex color='white'>
-        <Center w='100vw' h='100vh'>
-          <Box>
-            <BannerLabel />
-          </Box>
-        </Center>
-      </Flex>
+    <BgImage image={switchBannerImage()} alt={switchBannerImageAlt()}>
+      <Center fontSize='80px' fontFamily='Poppins' color='white' h='100vh'>
+        <BannerLabel />
+      </Center>
     </BgImage>
   );
 };

@@ -6,16 +6,16 @@ const BannerLabel = () => {
     <Location>
       {({ location }) => {
         if (location.pathname === '/about') {
-          return 'about';
+          return 'About';
         }
         if (location.pathname === '/menu') {
-          return 'menu';
+          return 'Menu';
         }
         if (location.pathname === '/contact') {
-          return 'contact';
+          return 'Contact';
         }
         if (location.pathname === '/blog') {
-          return 'blog';
+          return 'Blog';
         }
       }}
     </Location>
