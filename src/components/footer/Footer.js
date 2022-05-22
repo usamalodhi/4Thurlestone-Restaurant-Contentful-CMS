@@ -1,49 +1,23 @@
 import React from 'react';
-import { Grid } from '@chakra-ui/react';
-import FollowSocial from '../abstract/FollowSocial';
-import OpeningHours from '../abstract/OpeningHours';
+import { Flex, useStyleConfig, useMediaQuery } from '@chakra-ui/react';
+import OpeningHoursSocialLinks from '../abstract/OpeningHours_SocialLinks';
 import NameAddress from '../abstract/Name_Address';
 
-// .container {
-//   display: grid;
-//   grid-auto-columns: 1fr;
-//   grid-template-columns: 1fr;
-//   grid-template-rows: min-content min-content min-content;
-//   gap: 0px 0px;
-//   grid-template-areas:
-//     "BoxB"
-//     "BoxA"
-//     "BoxC";
-// }
-// .BoxB { grid-area: BoxB; }
-// .BoxA { grid-area: BoxA; }
-// .BoxC { grid-area: BoxC; }
-
 const Footer = () => {
+  const styles = useStyleConfig('Footer');
+  const [isLargerThan450] = useMediaQuery('(min-width: 450px)');
   return (
-    <Grid
+    <Flex
       as='footer'
-      layerStyle='footer'
-      gridTemplateColumns={{
-        base: '1fr',
-        sm: '1fr',
-        md: '0.25fr 0.5fr 0.25fr',
-      }}
-      gridTemplateRows={{
-        base: 'min-content, min-content, min-content',
-        sm: 'min-content, min-content, min-content',
-        md: 'min-content',
-      }}
-      gridTemplateAreas={{
-        base: `'BoxB' 'BoxA' 'BoxC'`,
-        sm: `'BoxB' 'BoxA' 'BoxC'`,
-        md: `'BoxA BoxB BoxC'`,
-      }}
+      __css={styles}
+      justifyContent='space-between'
+      alignItems='baseline'
+      rowGap='8px'
+      style={{ flexDirection: isLargerThan450 ? 'row' : 'column' }}
     >
-      <OpeningHours />
       <NameAddress />
-      <FollowSocial />
-    </Grid>
+      <OpeningHoursSocialLinks />
+    </Flex>
   );
 };
 
