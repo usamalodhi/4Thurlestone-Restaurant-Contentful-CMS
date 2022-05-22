@@ -10,10 +10,8 @@ const Header = () => {
   const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
   return (
     <Box as='header' __css={styles}>
-      <Box>
-        <Logo />
-      </Box>
-      <Box>{isLargerThan600 ? <NavLinks /> : <NavDrawer />}</Box>
+      <Logo />
+      {isLargerThan600 ? <NavLinks /> : <NavDrawer />}
     </Box>
   );
 };
