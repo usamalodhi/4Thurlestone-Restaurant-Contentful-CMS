@@ -3,16 +3,11 @@ import { Text, Flex } from '@chakra-ui/react';
 
 const NameAddress = () => {
   return (
-    <Flex
-      as='address'
-      gridArea='BoxB'
-      direction='column'
-      alignItems='center'
-      justifyContent='center'
-      border='2px solid blue'
-    >
+    <Flex as='address' direction='column' fontStyle='normal'>
       <Text as='h2'>4 THURLESTONE</Text>
-      <Text as='p'>4 Thurlestone Parade, Shepperton, TW17 9AR</Text>
+      <Text as='p'>Thurlestone Parade</Text>
+      <Text as='p'>Shepperton</Text>
+      <Text as='p'>TW17 9AR</Text>
     </Flex>
   );
 };
