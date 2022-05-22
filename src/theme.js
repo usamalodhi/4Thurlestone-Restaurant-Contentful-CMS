@@ -12,7 +12,6 @@ import '@fontsource/poppins';
 // misc (border-radius, box shadow)
 
 //components
-//-->Header
 const Header = {
   baseStyle: {
     display: 'flex',
@@ -25,9 +24,32 @@ const Header = {
   },
 };
 
+const Footer = {
+  baseStyle: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '24px',
+    background: '#000000',
+    color: '#EAE6E1',
+    fontFamily: 'Poppins',
+  },
+};
+
+const IndexPageHero = {
+  baseStyle: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
+  },
+};
+
 const theme = extendTheme({
   components: {
     Header,
+    Footer,
+    IndexPageHero,
   },
   colors: {
     brand: {
@@ -41,12 +63,6 @@ const theme = extendTheme({
     homePageTitle: {
       background: 'brand.secondary',
       color: 'brand.primary',
-    },
-    footer: {
-      padding: '24px',
-      background: '#000000',
-      color: '#EAE6E1',
-      fontFamily: 'Poppins',
     },
   },
   textStyles: {
