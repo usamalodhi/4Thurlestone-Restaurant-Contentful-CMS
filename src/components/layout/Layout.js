@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     <Flex h='100vh' direction='column'>
       <Header />
       {displayBannerBox}
-      <Box as='main' flex='1' border='2px solid black'>
+      <Box as='main' flex='1'>
         {children}
       </Box>
       <Footer />
