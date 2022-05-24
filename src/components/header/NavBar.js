@@ -3,7 +3,7 @@ import { Box, useMediaQuery, ListItem, UnorderedList, Text } from '@chakra-ui/re
 import { Link } from 'gatsby';
 import navLinks from '../../data/data';
 
-const NavBar = () => {
+const NavBar = ({ onClose }) => {
   const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
   return (
     <Box as='nav'>
@@ -16,7 +16,7 @@ const NavBar = () => {
       >
         {navLinks.map(({ id, to, label }) => (
           <ListItem key={id}>
-            <Link to={to}>
+            <Link onClick={onClose} to={to}>
               <Text textAlign='right' letterSpacing='0.1rem'>
                 {label}
               </Text>

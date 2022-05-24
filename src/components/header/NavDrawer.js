@@ -35,9 +35,9 @@ const NavDrawer = () => {
               direction='column'
               justifyContent='stretch'
               color='white'
-              onClick={onClose}
+              // onClick={onClose}
             >
-              <NavLinks />
+              <NavLinks onClose={onClose} />
               <FollowSocialDrawer />
             </Flex>
           </DrawerBody>
