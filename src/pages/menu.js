@@ -1,6 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Tabs, TabList, TabPanels, Tab, TabPanel, List, ListItem } from '@chakra-ui/react';
+import {
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  List,
+  ListItem,
+  SimpleGrid,
+} from '@chakra-ui/react';
+// import { LocalCafeIcon, RestaurantIcon, CakeIcon, BrunchDiningIcon } from '@mui/icons-material';
 
 const MenuPage = ({ data }) => {
   const teaMenu = data.tea.nodes;
@@ -12,30 +22,32 @@ const MenuPage = ({ data }) => {
     <>
       <Tabs isLazy isFitted variant='enclosed'>
         <TabList mb='1em'>
-          <Tab>Tea Menu</Tab>
-          <Tab>Daily Specials</Tab>
-          <Tab>Desserts</Tab>
-          <Tab>Set Menu</Tab>
+          <Tab>Drinks</Tab>
+          <Tab>Daily</Tab>
+          <Tab>Dessert</Tab>
+          <Tab>Evening</Tab>
         </TabList>
 
         <TabPanels>
           <TabPanel>
-            <List>
-              {teaMenu.map(({ name, price }) => (
-                <ListItem key={name}>
-                  <p>{name}</p>
-                  <p>{`£${parseFloat(price).toFixed(2)}`}</p>
-                </ListItem>
-              ))}
-            </List>
-            <List>
-              {coffeeMenu.map(({ name, price }) => (
-                <ListItem key={name}>
-                  <p>{name}</p>
-                  <p>{`£${parseFloat(price).toFixed(2)}`}</p>
-                </ListItem>
-              ))}
-            </List>
+            <SimpleGrid minChildWidth='300px'>
+              <List border='2px solid black'>
+                {teaMenu.map(({ name, price }) => (
+                  <ListItem key={name}>
+                    <p>{name}</p>
+                    <p>{`£${parseFloat(price).toFixed(2)}`}</p>
+                  </ListItem>
+                ))}
+              </List>
+              <List border='2px solid black'>
+                {coffeeMenu.map(({ name, price }) => (
+                  <ListItem key={name}>
+                    <p>{name}</p>
+                    <p>{`£${parseFloat(price).toFixed(2)}`}</p>
+                  </ListItem>
+                ))}
+              </List>
+            </SimpleGrid>
           </TabPanel>
 
           <TabPanel>

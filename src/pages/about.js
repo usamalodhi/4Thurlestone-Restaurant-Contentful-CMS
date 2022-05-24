@@ -41,7 +41,7 @@ const AboutPage = ({ data }) => {
 
       <SimpleGrid background='#EAE6E1' color='#272625' columns={1}>
         <Center>
-          <Text padding='0px 24px' textAlign='center'>
+          <Text padding='24px 0px 24px 0px' textAlign='center'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ab laudantium
             corrupti a hic cupiditate, dolorem doloremque explicabo distinctio quidem dolorum nihil,
             eos nesciunt impedit tenetur veritatis. Molestiae, magni eum? Quos blanditiis expedita
@@ -52,7 +52,7 @@ const AboutPage = ({ data }) => {
         </Center>
         <GatsbyImage image={imageMain} alt='test' />
         <Center>
-          <Text padding='0px 24px' textAlign='center'>
+          <Text padding='24px 0px 24px 0px' textAlign='center'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ab laudantium
             corrupti a hic cupiditate, dolorem doloremque explicabo distinctio quidem dolorum nihil,
             eos nesciunt impedit tenetur veritatis. Molestiae, magni eum? Quos blanditiis expedita

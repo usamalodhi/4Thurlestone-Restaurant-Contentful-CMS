@@ -5,7 +5,7 @@ const ContactPage = () => {
   return (
     <>
       <SimpleGrid minChildWidth='400px' spacingX='1em' spacingY='1em' mt='1em'>
-        <Box border='2px solid black'>
+        <Box>
           <iframe
             title='google maps embed of 4Thurlestone'
             width='100%'
@@ -14,7 +14,7 @@ const ContactPage = () => {
             style={{ WebkitFilter: 'grayscale(100%)', filter: 'grayscale(100%)' }}
           />
         </Box>
-        <Box border='2px solid red'>
+        <Box>
           <Text>01932 558886</Text>
           <Text>ADDRESS</Text>
           <Text as='address'>

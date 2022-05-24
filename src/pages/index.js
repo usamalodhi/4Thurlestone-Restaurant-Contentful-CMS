@@ -2,16 +2,18 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
+import { Box, Text, useStyleConfig } from '@chakra-ui/react';
 
 const IndexPage = ({ data }) => {
+  const styles = useStyleConfig('IndexPageHero');
   const image = getImage(data.allContentfulIndexPage.nodes[0].heroImageIndex);
-  const { cafeHours, restaurantHours } = data.allContentfulIndexPage.nodes[0];
   return (
     <BgImage style={{ minHeight: '100vh' }} image={image}>
-      <main>
-        <h1>{cafeHours}</h1>
-        <h1>{restaurantHours}</h1>
-      </main>
+      <Box __css={styles}>
+        <Text as='h1' textStyle='homePageTitle' layerStyle='homePageTitle'>
+          4 Thurlestone
+        </Text>
+      </Box>
     </BgImage>
   );
 };
