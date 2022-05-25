@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   );
 
   return (
-    <Flex h='100vh' direction='column'>
+    <Flex fontFamily='Poppins' h='100vh' direction='column'>
       <Header />
       {displayBannerBox}
       <Box as='main' flex='1'>
