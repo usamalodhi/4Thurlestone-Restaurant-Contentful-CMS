@@ -1,54 +1,124 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+<div id="top"></div>
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/usamalodhi/4Thurlestone-Restaurant-Contentful-CMS">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
 
-## 🚀 Quick start
+<h3 align="center">4 Thurlestone</h3>
 
-1.  **Create a Gatsby site.**
+  <p align="center">The 4 Thurlestone Restaurant and Cafe Wesbite Made For The Business Owner - Gatsby, Chakra UI and Framer Motion
+    <br />
+    <a href="https://github.com/usamalodhi/4Thurlestone-Restaurant-Contentful-CMS"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://www.google.com/">View Live</a>
+    ·
+    <a href="https://github.com/usamalodhi/4Thurlestone-Restaurant-Contentful-CMS/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/usamalodhi/4Thurlestone-Restaurant-Contentful-CMS/issues">Request Feature</a>
+  </p>
+</div>
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#getting-started-disclaimer">Getting Started Disclaimer</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+<!-- ABOUT THE PROJECT -->
 
-2.  **Start developing.**
+## About The Project
 
-    Navigate into your new site’s directory and start it up.
+[![Product Name Screen Shot][product-screenshot]](https://www.google.com)
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+Write Text Here
 
-3.  **Open the code and start customizing!**
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-    Your site is now running at http://localhost:8000!
+Technologies
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+- [Gatsby](https://www.gatsbyjs.com)
+- [Chakra UI](https://chakra-ui.com)
+- [Framer Motion](https://www.framer.com/motion)
+- [Contentful](https://www.contentful.com)
+- [Figma](https://www.figma.com)
 
-4.  **Learn more**
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+<!-- GETTING STARTED -->
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Getting Started Disclaimer
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Unfortunately this project is not set up to be downloaded and run on a local machine. This is because API calls are made to the Contentful CMS where the data and assets are stored. A Contentful space is to be kept secure by keeping the Space ID and Delivery Access Token private at all times
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+However the code can be reviewed on a local machine by cloning the repo:
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```js
+git clone https://github.com/usamalodhi/4Thurlestone-Restaurant-Contentful-CMS
+```
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Contributing
 
-## 🚀 Quick start (Gatsby Cloud)
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+As a workaround of not having access to Contentful please use Gatsbys functionality to access data in markdown and/or YAML format via graphQL queries and we can update the Contentful models accordingly pending a successful PR
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Usama Lodhi - lodhius@gmail.com
+
+Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+
+    <a href="https://www.google.com/">View Live</a>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- Learnings -->
+
+## Challenges and Learnings
+
+<hr/>
+
+### Building headless websites With Gatsby and Contentful CMS
+
+elaborate further here
+
+<br>
+
+### Modern UI/UX Design Using Figma, Chakra UI, and Framer Motion
+
+elaborate further here
+
+### Working With Clients
+
+elaborate further here
+
+<p align="right">(<a href="#top">back to top</a>)</p>
