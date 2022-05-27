@@ -9,98 +9,196 @@ import {
   List,
   ListItem,
   SimpleGrid,
+  Flex,
+  Spacer,
+  Text,
 } from '@chakra-ui/react';
-// import { LocalCafeIcon, RestaurantIcon, CakeIcon, BrunchDiningIcon } from '@mui/icons-material';
 
 const MenuPage = ({ data }) => {
   const teaMenu = data.tea.nodes;
   const coffeeMenu = data.coffee.nodes;
   const dailySpecialsMenu = data.dailySpecials.nodes;
   const dessertsMenu = data.desserts.nodes;
+  const startersSetMenu = data.starter.nodes;
+  const dessertSetMenu = data.dessert.nodes;
+  const mainSetMenu = data.main.nodes;
+  const whiteWineList = data.whiteWine.nodes;
+  const redWineList = data.redWine.nodes;
+
+  const menuTabStyles = { color: '#eae6e1', background: '#000000', fontWeight: 'bold' };
+  const menuTabStylesHover = { color: '#000000', background: '#eae6e1', fontWeight: 'bold' };
 
   return (
     <>
-      {/* background='#E0E0E0'
-    colorScheme='gray' */}
-      {/* variant='soft-rounded' */}
       <Tabs isLazy isFitted variant='unstyled'>
-        <TabList p='0px 0px 0px 0px' background='#white' borderBott='2px solid black'>
-          <Tab
-            _selected={{ color: '#eae6e1', background: '#000000', fontWeight: 'bold' }}
-            _hover={{ color: '#000000', background: '#eae6e1', fontWeight: 'bold' }}
-            _active={{ color: '#eae6e1', background: '#000000', fontWeight: 'bold' }}
-          >
+        <TabList p='0' background='white'>
+          <Tab _selected={menuTabStyles} _active={menuTabStyles} _hover={menuTabStylesHover}>
             Drinks
           </Tab>
-          <Tab
-            _selected={{ color: '#eae6e1', background: '#000000', fontWeight: 'bold' }}
-            _hover={{ color: '#000000', background: '#eae6e1', fontWeight: 'bold' }}
-            _active={{ color: '#eae6e1', background: '#000000', fontWeight: 'bold' }}
-          >
+          <Tab _selected={menuTabStyles} _active={menuTabStyles} _hover={menuTabStylesHover}>
             Daily
           </Tab>
-          <Tab
-            _selected={{ color: '#eae6e1', background: '#000000', fontWeight: 'bold' }}
-            _hover={{ color: '#000000', background: '#eae6e1', fontWeight: 'bold' }}
-            _active={{ color: '#eae6e1', background: '#000000', fontWeight: 'bold' }}
-          >
+          <Tab _selected={menuTabStyles} _active={menuTabStyles} _hover={menuTabStylesHover}>
             Dessert
           </Tab>
-          <Tab
-            _selected={{ color: '#eae6e1', background: '#000000', fontWeight: 'bold' }}
-            _hover={{ color: '#000000', background: '#eae6e1', fontWeight: 'bold' }}
-            _active={{ color: '#eae6e1', background: '#000000', fontWeight: 'bold' }}
-          >
-            Evening
+          <Tab _selected={menuTabStyles} _active={menuTabStyles} _hover={menuTabStylesHover}>
+            Fixed
           </Tab>
         </TabList>
 
-        <TabPanels p='0px 0px 0px 0px'>
-          <TabPanel p='0px 0px 0px 0px'>
-            <SimpleGrid minChildWidth='300px'>
-              <List border='2px solid black'>
+        <TabPanels p='24px'>
+          <TabPanel p='0'>
+            <SimpleGrid minChildWidth='300px' spacingX='16px'>
+              <List>
                 {teaMenu.map(({ name, price }) => (
-                  <ListItem mt='16px' key={name}>
-                    <p>{name}</p>
-                    <p>{`£${parseFloat(price).toFixed(2)}`}</p>
+                  <ListItem pb='8px' key={name}>
+                    <Flex>
+                      <Text fontWeight='bold'>{name}</Text>
+                      <Spacer />
+                      <Text fontStyle='italic'>{price}</Text>
+                    </Flex>
                   </ListItem>
                 ))}
               </List>
-              <List border='2px solid black'>
+              <List>
                 {coffeeMenu.map(({ name, price }) => (
-                  <ListItem mt='16px' key={name}>
-                    <p>{name}</p>
-                    <p>{`£${parseFloat(price).toFixed(2)}`}</p>
+                  <ListItem pb='8px' key={name}>
+                    <Flex>
+                      <Text fontWeight='bold'>{name}</Text>
+                      <Spacer />
+                      <Text fontStyle='italic'>{price}</Text>
+                    </Flex>
                   </ListItem>
                 ))}
               </List>
             </SimpleGrid>
           </TabPanel>
-
-          <TabPanel p='0px 0px 0px 0px'>
+          <TabPanel p='0'>
             <List>
               {dailySpecialsMenu.map(({ name, price }) => (
-                <ListItem key={name}>
-                  <p>{name}</p>
-                  <p>{`£${parseFloat(price).toFixed(2)}`}</p>
+                <ListItem pb='8px' key={name}>
+                  <Flex>
+                    <Text fontWeight='bold'>{name}</Text>
+                    <Spacer />
+                    <Text fontStyle='italic'>{price}</Text>
+                  </Flex>
                 </ListItem>
               ))}
             </List>
           </TabPanel>
 
-          <TabPanel p='0px 0px 0px 0px'>
+          <TabPanel p='0'>
             <List>
               {dessertsMenu.map(({ name, price }) => (
-                <ListItem key={name}>
-                  <p>{name}</p>
-                  <p>{`£${parseFloat(price).toFixed(2)}`}</p>
+                <ListItem pb='8px' key={name}>
+                  <Flex>
+                    <Text fontWeight='bold'>{name}</Text>
+                    <Spacer />
+                    <Text fontStyle='italic'>{price}</Text>
+                  </Flex>
                 </ListItem>
               ))}
             </List>
           </TabPanel>
-
-          <TabPanel p='0px 0px 0px 0px'>
-            <p>Set Menu</p>
+          <TabPanel p='0'>
+            <Flex direction='column' pb='8px'>
+              <Text fontWeight='bold' pb='8px'>
+                Starter
+              </Text>
+              <List>
+                {startersSetMenu.map(({ name }) => (
+                  <ListItem pb='8px' key={name}>
+                    <Flex>
+                      <Text fontStyle='italic'>{name}</Text>
+                    </Flex>
+                  </ListItem>
+                ))}
+              </List>
+            </Flex>
+            <Flex direction='column' pb='8px'>
+              <Text fontWeight='bold' pb='8px'>
+                Main Course
+              </Text>
+              <List>
+                {mainSetMenu.map(({ name }) => (
+                  <ListItem pb='8px' key={name}>
+                    <Flex>
+                      <Text fontStyle='italic'>{name}</Text>
+                    </Flex>
+                  </ListItem>
+                ))}
+              </List>
+            </Flex>
+            <Flex direction='column' pb='8px'>
+              <Text fontWeight='bold' pb='8px'>
+                Dessert
+              </Text>
+              <List>
+                {dessertSetMenu.map(({ name }) => (
+                  <ListItem pb='8px' key={name}>
+                    <Flex>
+                      <Text fontStyle='italic'>{name}</Text>
+                    </Flex>
+                  </ListItem>
+                ))}
+              </List>
+            </Flex>
+            <Flex direction='column' pb='8px'>
+              <Text fontWeight='bold' pb='8px'>
+                Red
+              </Text>
+              <List>
+                {redWineList.map(
+                  ({
+                    name,
+                    strength,
+                    description,
+                    bottlePrice,
+                    priceGlassSmall,
+                    priceGlassLarge,
+                  }) => (
+                    <ListItem pb='8px' key={name}>
+                      <Flex direction='column'>
+                        <Text fontStyle='italic'>{name}</Text>
+                        <Text>{strength}</Text>
+                        <Text>{description}</Text>
+                        <Text>{bottlePrice}</Text>
+                        <Text>{priceGlassSmall}</Text>
+                        <Text>{priceGlassLarge}</Text>
+                      </Flex>
+                    </ListItem>
+                  )
+                )}
+              </List>
+            </Flex>
+            <Flex direction='column' pb='8px'>
+              <Text fontWeight='bold' pb='8px'>
+                White
+              </Text>
+              <List>
+                {whiteWineList.map(
+                  ({
+                    name,
+                    strength,
+                    description,
+                    bottlePrice,
+                    priceGlassSmall,
+                    priceGlassLarge,
+                  }) => (
+                    <ListItem pb='8px' key={name}>
+                      <Flex direction='column'>
+                        <Text fontStyle='italic'>{name}</Text>
+                        <Text>{strength}</Text>
+                        <Text>{description}</Text>
+                        <Text>{bottlePrice}</Text>
+                        <Text>{priceGlassSmall}</Text>
+                        <Text>{priceGlassLarge}</Text>
+                      </Flex>
+                    </ListItem>
+                  )
+                )}
+              </List>
+            </Flex>
           </TabPanel>
         </TabPanels>
       </Tabs>
@@ -110,6 +208,31 @@ const MenuPage = ({ data }) => {
 
 export const data = graphql`
   {
+    starter: allContentfulSetMenuItem(filter: { category: { eq: "SetMenuStarter" } }) {
+      nodes {
+        name
+      }
+    }
+    main: allContentfulSetMenuItem(filter: { category: { eq: "SetMenuMain" } }) {
+      nodes {
+        name
+      }
+    }
+    dessert: allContentfulSetMenuItem(filter: { category: { eq: "SetMenuDessert" } }) {
+      nodes {
+        name
+      }
+    }
+    whiteWine: allContentfulWineItem(filter: { type: { eq: "White" } }) {
+      nodes {
+        ...wineData
+      }
+    }
+    redWine: allContentfulWineItem(filter: { type: { eq: "Red" } }) {
+      nodes {
+        ...wineData
+      }
+    }
     tea: allContentfulMenuItem(
       filter: { category: { eq: "Tea" } }
       sort: { fields: price, order: DESC }
@@ -118,6 +241,7 @@ export const data = graphql`
         ...menuData
       }
     }
+
     coffee: allContentfulMenuItem(
       filter: { category: { eq: "Coffee" } }
       sort: { fields: price, order: DESC }
@@ -126,6 +250,7 @@ export const data = graphql`
         ...menuData
       }
     }
+
     dailySpecials: allContentfulMenuItem(
       filter: { category: { eq: "DailySpecials" } }
       sort: { fields: price, order: DESC }
@@ -134,6 +259,7 @@ export const data = graphql`
         ...menuData
       }
     }
+
     desserts: allContentfulMenuItem(
       filter: { category: { eq: "Desserts" } }
       sort: { fields: price, order: DESC }
