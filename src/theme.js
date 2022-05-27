@@ -36,33 +36,28 @@ const Footer = {
   },
 };
 
-const IndexPageHero = {
-  baseStyle: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-  },
-};
-
 const theme = extendTheme({
   components: {
     Header,
     Footer,
-    IndexPageHero,
   },
   colors: {
     brand: {
       primary: '#EAE6E1',
       secondary: '#000000',
       300: '#4C4C4C',
+      400: '#000000',
     },
   },
 
   layerStyles: {
     homePageTitle: {
-      background: 'brand.secondary',
       color: 'brand.primary',
+    },
+    menuTab: {
+      color: '#EAE6E1',
+      background: '#000000',
+      fontWeight: 'bold',
     },
   },
   textStyles: {
