@@ -3,7 +3,7 @@ import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
-import { Box, Center } from '@chakra-ui/react';
+import { Flex, Center } from '@chakra-ui/react';
 import BannerLabel from './BannerLabel';
 
 const BannerBox = () => {
@@ -78,9 +78,17 @@ const BannerBox = () => {
 
   return (
     <BgImage image={switchBannerImage()} alt={switchBannerImageAlt()}>
-      <Center fontSize='80px' fontFamily='Poppins' color='white' h='100vh'>
-        <BannerLabel />
-      </Center>
+      <Flex backgroundColor='rgba(0,0,0,0.5)' h='100vh'>
+        <Center
+          as='h1'
+          textStyle='homePageTitle'
+          layerStyle='homePageTitle'
+          h='100vh'
+          margin='0 auto'
+        >
+          <BannerLabel />
+        </Center>
+      </Flex>
     </BgImage>
   );
 };

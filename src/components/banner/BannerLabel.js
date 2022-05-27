@@ -1,24 +1,27 @@
 import React from 'react';
 import { Location } from '@reach/router';
+import { Box } from '@chakra-ui/react';
 
 const BannerLabel = () => {
   return (
-    <Location>
-      {({ location }) => {
-        if (location.pathname === '/about') {
-          return 'About';
-        }
-        if (location.pathname === '/menu') {
-          return 'Menu';
-        }
-        if (location.pathname === '/contact') {
-          return 'Contact';
-        }
-        if (location.pathname === '/blog') {
-          return 'Blog';
-        }
-      }}
-    </Location>
+    <Box border='2px solid white' height='min-content' padding='16px'>
+      <Location>
+        {({ location }) => {
+          if (location.pathname === '/about') {
+            return 'about';
+          }
+          if (location.pathname === '/menu') {
+            return 'menu';
+          }
+          if (location.pathname === '/contact') {
+            return 'contact';
+          }
+          if (location.pathname === '/blog') {
+            return 'blog';
+          }
+        }}
+      </Location>
+    </Box>
   );
 };
 
