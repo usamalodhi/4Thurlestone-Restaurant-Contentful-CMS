@@ -70,10 +70,12 @@ const theme = extendTheme({
       textAlign: 'justify',
     },
     homePageInfo: {
-      fontSize: ['1rem', '1.5rem', '2rem', '2.5rem'],
+      fontSize: ['1rem'],
+      fontWeight: 'bold',
+      lineHeight: '150%',
+      letterSpacing: '5px',
       fontFamily: 'Poppins',
       textAlign: 'justify',
-      color: 'brand.200',
     },
   },
   breakpoints: {
