@@ -7,13 +7,12 @@ const FollowSocialDrawer = () => {
     <Box height='100%' as='nav' aria-label='Social Media Links'>
       <UnorderedList
         display='flex'
-        border='2px solid white'
         flexDirection='column'
         alignItems='flex-end'
         justifyContent='space-evenly'
         height='100%'
-        p='0px 0px 0px 0px'
-        m='0px 0px 0px 0px'
+        p='0px'
+        m='0px'
         listStyleType='none'
         listStylePosition='none'
       >

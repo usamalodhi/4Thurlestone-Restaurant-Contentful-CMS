@@ -27,15 +27,10 @@ const NavDrawer = () => {
       <Drawer background='black' placement='right' size='full' isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent background='black'>
-          <DrawerCloseButton color='white' border='2px solid white' />
+          <DrawerCloseButton color='white' />
           <DrawerHeader color='white'>4 Thurlestone</DrawerHeader>
           <DrawerBody display='flex' justifyContent='flex-end'>
-            <Flex
-              border='2px solid white'
-              direction='column'
-              justifyContent='stretch'
-              color='white'
-            >
+            <Flex direction='column' justifyContent='stretch' color='white'>
               <NavLinks onClose={onClose} />
               <FollowSocialDrawer />
             </Flex>

@@ -17,7 +17,7 @@ const NavBar = ({ onClose }) => {
         {navLinks.map(({ id, to, label }) => (
           <ListItem key={id}>
             <Link onClick={onClose} to={to}>
-              <Text textAlign='right' letterSpacing='0.1rem'>
+              <Text fontSize={{ base: '16px', sm: '20px' }} textAlign='right'>
                 {label}
               </Text>
             </Link>
