@@ -3,7 +3,6 @@ import { Box, useMediaQuery, ListItem, UnorderedList, Text } from '@chakra-ui/re
 import { Link } from 'gatsby';
 import navLinks from '../../data/data';
 import { motion } from 'framer-motion';
-import { fontWeight } from '@mui/system';
 
 const NavBar = ({ onClose }) => {
   const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
