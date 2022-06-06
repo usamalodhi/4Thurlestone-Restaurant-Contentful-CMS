@@ -1,9 +1,18 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import { Box, SimpleGrid, Text } from '@chakra-ui/react';
+import BannerBox from '../components/banner/BannerBox';
 
-const ContactPage = () => {
+const ContactPage = ({ data }) => {
   return (
     <>
+      <BannerBox
+        bannerImage={data.allContentfulContactPage.nodes[0].bannerImage}
+        altText={
+          'Contact 4 Thurelstone, for those in search of location, direction, or general and business enquiries'
+        }
+        bannerLabel={'contact'}
+      />
       <SimpleGrid minChildWidth='400px' spacingX='1em' spacingY='1em' mt='1em'>
         <Box>
           <iframe
@@ -49,5 +58,17 @@ const ContactPage = () => {
     </>
   );
 };
+
+export const data = graphql`
+  {
+    allContentfulContactPage {
+      nodes {
+        bannerImage {
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
+  }
+`;
 
 export default ContactPage;

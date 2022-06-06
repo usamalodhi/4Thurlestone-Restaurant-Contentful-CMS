@@ -13,6 +13,7 @@ import {
   Spacer,
   Text,
 } from '@chakra-ui/react';
+import BannerBox from '../components/banner/BannerBox';
 
 const MenuPage = ({ data }) => {
   const teaMenu = data.tea.nodes;
@@ -30,6 +31,13 @@ const MenuPage = ({ data }) => {
 
   return (
     <>
+      <BannerBox
+        bannerImage={data.allContentfulMenuPage.nodes[0].bannerImage}
+        altText={
+          'Menu 4 Thurelstone, Taking inspiration from British and European cultures as well as local favourites'
+        }
+        bannerLabel={'menu'}
+      />
       <Tabs isLazy isFitted variant='unstyled'>
         <TabList p='0' background='white'>
           <Tab _selected={menuTabStyles} _active={menuTabStyles} _hover={menuTabStylesHover}>
@@ -266,6 +274,13 @@ export const data = graphql`
     ) {
       nodes {
         ...menuData
+      }
+    }
+    allContentfulMenuPage {
+      nodes {
+        bannerImage {
+          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        }
       }
     }
   }

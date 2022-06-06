@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import { BgImage } from 'gbimage-bridge';
-import { Box, Text, Flex, useStyleConfig } from '@chakra-ui/react';
+import { Box, Text, Flex } from '@chakra-ui/react';
 
 const IndexPage = ({ data }) => {
   // const styles = useStyleConfig('IndexPageHero');
@@ -10,8 +10,6 @@ const IndexPage = ({ data }) => {
   const { restaurantTitle, heroSloganTwo } = data.allContentfulIndexPage.nodes[0];
   const heroSloganOne = data.allContentfulIndexPage.nodes[0].heroSloganOne;
   const image = getImage(data.allContentfulIndexPage.nodes[0].heroImageIndex);
-
-  console.log(data);
 
   return (
     <BgImage style={{ height: '100vh', backgroundImage: 'contain' }} image={image}>
