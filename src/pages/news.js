@@ -22,7 +22,7 @@ const NewsPage = ({ data }) => {
         bannerLabel={'blog'}
       />
       <Box>
-        <Box h='100vh'>
+        <Box h='70vh'>
           <Swiper
             style={{
               width: '100%',
