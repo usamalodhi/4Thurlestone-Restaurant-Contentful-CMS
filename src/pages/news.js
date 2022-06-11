@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import BannerBox from '../components/banner/BannerBox';
-import { Box } from '@chakra-ui/react';
+import { Box, Flex, useMediaQuery } from '@chakra-ui/react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
@@ -10,8 +10,10 @@ import { Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import '../swipercss/swipercss.css';
 
 const NewsPage = ({ data }) => {
+  const [isLargerThan1000] = useMediaQuery('(min-width: 1000px)');
   return (
     <>
       <BannerBox
@@ -25,12 +27,14 @@ const NewsPage = ({ data }) => {
             style={{
               width: '100%',
               height: '100%',
+              '--swiper-navigation-size': '1em',
             }}
             pagination={{
-              type: 'fraction',
+              dynamicBullets: true,
             }}
+            loop={true}
             navigation={true}
-            modules={[Pagination, Navigation]}
+            modules={[Navigation, Pagination]}
             className='mySwiper'
           >
             <SwiperSlide
@@ -46,17 +50,22 @@ const NewsPage = ({ data }) => {
               Slide 1
             </SwiperSlide>
 
-            <SwiperSlide
-              style={{
-                textAlign: 'center',
-                fontSize: '18px',
-                background: '#ffffff',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              Slide 2
+            <SwiperSlide>
+              <Flex
+                height='100%'
+                flexDirection={isLargerThan1000 ? 'row' : 'column'}
+                justifyContent='flex-start'
+                alignContent='center'
+                textAlign='center'
+                border='2px solid red'
+              >
+                <Box border='2px solid black' height='100%' width={isLargerThan1000 ? '50%' : '100%'}>
+                  Picture
+                </Box>
+                <Box border='2px solid black' height='100%' width={isLargerThan1000 ? '50%' : '100%'}>
+                  Text
+                </Box>
+              </Flex>
             </SwiperSlide>
           </Swiper>
         </Box>
