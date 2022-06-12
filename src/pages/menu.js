@@ -26,8 +26,8 @@ const MenuPage = ({ data }) => {
   const whiteWineList = data.whiteWine.nodes;
   const redWineList = data.redWine.nodes;
 
-  const menuTabStyles = { color: '#eae6e1', background: '#000000', fontWeight: 'bold' };
-  const menuTabStylesHover = { color: '#000000', background: '#eae6e1', fontWeight: 'bold' };
+  const menuTabStyles = { color: '#EAE6E1', background: '#000000', fontWeight: 'bold' };
+  const menuTabStylesHover = { color: '#000000', background: '#EAE6E1', fontWeight: 'bold' };
 
   return (
     <>
@@ -39,7 +39,7 @@ const MenuPage = ({ data }) => {
         bannerLabel={'menu'}
       />
       <Tabs isLazy isFitted variant='unstyled'>
-        <TabList p='0' background='white'>
+        <TabList p='0' background='#FFFFFF'>
           <Tab _selected={menuTabStyles} _active={menuTabStyles} _hover={menuTabStylesHover}>
             Drinks
           </Tab>
@@ -156,27 +156,18 @@ const MenuPage = ({ data }) => {
                 Red
               </Text>
               <List>
-                {redWineList.map(
-                  ({
-                    name,
-                    strength,
-                    description,
-                    bottlePrice,
-                    priceGlassSmall,
-                    priceGlassLarge,
-                  }) => (
-                    <ListItem pb='8px' key={name}>
-                      <Flex direction='column'>
-                        <Text fontStyle='italic'>{name}</Text>
-                        <Text>{strength}</Text>
-                        <Text>{description}</Text>
-                        <Text>{bottlePrice}</Text>
-                        <Text>{priceGlassSmall}</Text>
-                        <Text>{priceGlassLarge}</Text>
-                      </Flex>
-                    </ListItem>
-                  )
-                )}
+                {redWineList.map(({ name, strength, description, bottlePrice, priceGlassSmall, priceGlassLarge }) => (
+                  <ListItem pb='8px' key={name}>
+                    <Flex direction='column'>
+                      <Text fontStyle='italic'>{name}</Text>
+                      <Text>{strength}</Text>
+                      <Text>{description}</Text>
+                      <Text>{bottlePrice}</Text>
+                      <Text>{priceGlassSmall}</Text>
+                      <Text>{priceGlassLarge}</Text>
+                    </Flex>
+                  </ListItem>
+                ))}
               </List>
             </Flex>
             <Flex direction='column' pb='8px'>
@@ -184,27 +175,18 @@ const MenuPage = ({ data }) => {
                 White
               </Text>
               <List>
-                {whiteWineList.map(
-                  ({
-                    name,
-                    strength,
-                    description,
-                    bottlePrice,
-                    priceGlassSmall,
-                    priceGlassLarge,
-                  }) => (
-                    <ListItem pb='8px' key={name}>
-                      <Flex direction='column'>
-                        <Text fontStyle='italic'>{name}</Text>
-                        <Text>{strength}</Text>
-                        <Text>{description}</Text>
-                        <Text>{bottlePrice}</Text>
-                        <Text>{priceGlassSmall}</Text>
-                        <Text>{priceGlassLarge}</Text>
-                      </Flex>
-                    </ListItem>
-                  )
-                )}
+                {whiteWineList.map(({ name, strength, description, bottlePrice, priceGlassSmall, priceGlassLarge }) => (
+                  <ListItem pb='8px' key={name}>
+                    <Flex direction='column'>
+                      <Text fontStyle='italic'>{name}</Text>
+                      <Text>{strength}</Text>
+                      <Text>{description}</Text>
+                      <Text>{bottlePrice}</Text>
+                      <Text>{priceGlassSmall}</Text>
+                      <Text>{priceGlassLarge}</Text>
+                    </Flex>
+                  </ListItem>
+                ))}
               </List>
             </Flex>
           </TabPanel>
@@ -241,19 +223,13 @@ export const data = graphql`
         ...wineData
       }
     }
-    tea: allContentfulMenuItem(
-      filter: { category: { eq: "Tea" } }
-      sort: { fields: price, order: DESC }
-    ) {
+    tea: allContentfulMenuItem(filter: { category: { eq: "Tea" } }, sort: { fields: price, order: DESC }) {
       nodes {
         ...menuData
       }
     }
 
-    coffee: allContentfulMenuItem(
-      filter: { category: { eq: "Coffee" } }
-      sort: { fields: price, order: DESC }
-    ) {
+    coffee: allContentfulMenuItem(filter: { category: { eq: "Coffee" } }, sort: { fields: price, order: DESC }) {
       nodes {
         ...menuData
       }
@@ -268,10 +244,7 @@ export const data = graphql`
       }
     }
 
-    desserts: allContentfulMenuItem(
-      filter: { category: { eq: "Desserts" } }
-      sort: { fields: price, order: DESC }
-    ) {
+    desserts: allContentfulMenuItem(filter: { category: { eq: "Desserts" } }, sort: { fields: price, order: DESC }) {
       nodes {
         ...menuData
       }
