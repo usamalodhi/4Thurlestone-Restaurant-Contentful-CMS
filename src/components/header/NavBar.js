@@ -10,7 +10,7 @@ const NavBar = ({ onClose }) => {
   const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
   return (
     <Box as='nav'>
-      <UnorderedList flexDirection={isLargerThan600 ? 'row' : 'column'} __css={styles}>
+      <UnorderedList flexDirection={isLargerThan600 ? 'row' : 'column'} listStyleType='none' __css={styles}>
         {navLinks.map(({ id, to, label }) => (
           <ListItem key={id}>
             <Link onClick={onClose} to={to}>
@@ -18,7 +18,7 @@ const NavBar = ({ onClose }) => {
                 as={motion.p}
                 whileHover={{ y: -5.0, color: '#FFFFFF', scale: 1.1 }}
                 transition='0.1s linear'
-                fontSize={{ base: '16px', sm: '20px' }}
+                fontSize={{ base: '16px' }}
                 textAlign='right'
               >
                 {label}

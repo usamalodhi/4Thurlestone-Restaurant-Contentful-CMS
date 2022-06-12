@@ -22,7 +22,7 @@ const NavDrawer = () => {
   return (
     <Box background='black'>
       <Button ref={btnRef} onClick={onOpen}>
-        <HamburgerIcon />
+        <HamburgerIcon color='black' fill='black' />
       </Button>
       <Drawer background='black' placement='right' size='full' isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay />
