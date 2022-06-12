@@ -16,9 +16,8 @@ const Header = {
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '24px',
-    background: '#000000',
-    color: '#EAE6E1',
-    fontFamily: 'Poppins',
+    background: 'brand.secondary',
+    color: 'brand.primary',
   },
 };
 
@@ -28,9 +27,8 @@ const Footer = {
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '24px',
-    background: '#000000',
-    color: '#EAE6E1',
-    fontFamily: 'Poppins',
+    background: 'brand.secondary',
+    color: 'brand.primary',
   },
 };
 
@@ -82,8 +80,8 @@ const theme = extendTheme({
     brand: {
       primary: '#EAE6E1',
       secondary: '#000000',
-      100: '#4C4C4C',
-      200: '#000000',
+      white: '#FFFFFF',
+      darkGrey: '#272625',
     },
   },
 
@@ -92,26 +90,31 @@ const theme = extendTheme({
       color: 'brand.primary',
     },
     menuTab: {
-      color: '#EAE6E1',
-      background: '#000000',
+      color: 'brand.primary',
+      background: 'brand.secondary',
       fontWeight: 'bold',
+    },
+    SwiperSlide: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center',
+      height: '100%',
     },
   },
   textStyles: {
     homePageTitle: {
-      fontSize: ['5rem'],
-      fontWeight: 'bold',
-      lineHeight: '150%',
-      letterSpacing: '5px',
-      fontFamily: 'Poppins',
-      textAlign: 'justify',
-    },
-    homePageInfo: {
       fontSize: ['2.5rem'],
       fontWeight: 'bold',
       lineHeight: '150%',
       letterSpacing: '5px',
-      fontFamily: 'Poppins',
+      textAlign: 'justify',
+    },
+    BannerBox: {
+      fontSize: ['1.25rem'],
+      fontWeight: 'bold',
+      lineHeight: '150%',
+      letterSpacing: '5px',
       textAlign: 'justify',
     },
   },
