@@ -1,20 +1,18 @@
 <div id="top"></div>
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/usamalodhi/4Thurlestone-Restaurant-Contentful-CMS">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">4 Thurlestone</h3>
 
-  <p align="center">The 4 Thurlestone Restaurant and Cafe Wesbite Made For The Business Owner - Gatsby, Chakra UI and Framer Motion
+  <p align="center">The 4 Thurlestone Restaurant and Cafe Wesbite Made For The Business Owner - Gatsby, Chakra UI, Framer Motion and Contentful CMS
     <br />
     <a href="https://github.com/usamalodhi/4Thurlestone-Restaurant-Contentful-CMS"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://www.google.com/">View Live</a>
+    <a href="https://dapper-syrniki-8bf279.netlify.app">View Live</a>
     ·
     <a href="https://github.com/usamalodhi/4Thurlestone-Restaurant-Contentful-CMS/issues">Report Bug</a>
     ·
@@ -37,9 +35,9 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://www.google.com)
+This project is currently a Work In Progress and is being worked on towards completion. An owner and chef of a local restaurant asked me to build a custom website for his restaurant.
 
-Write Text Here
+The client gave me a complete directive over the design and technical build of the website.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -107,18 +105,8 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <hr/>
 
-### Building headless websites With Gatsby and Contentful CMS
+There are several challenges that I have dealt with with learning outcomes towards making me a better developer
 
-elaborate further here
-
-<br>
-
-### Modern UI/UX Design Using Figma, Chakra UI, and Framer Motion
-
-elaborate further here
-
-### Working With Clients
-
-elaborate further here
+The biggest challenge was not having any direction over the design or technical build as website design and build is not an area of the clients expertise. Prior to starting the project I researched on current UI/UX design practices in modern web design which I have attempted to include in my design. I also researched on modern website build practices. I decided that a Gatsby production website known for fast, responsive static builds and the Contentful CMS which allows for easy modification of data, is the the way to go
 
 <p align="right">(<a href="#top">back to top</a>)</p>
