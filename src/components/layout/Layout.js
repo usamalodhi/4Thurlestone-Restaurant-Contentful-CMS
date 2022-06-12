@@ -6,7 +6,7 @@ import Footer from '../footer/Footer';
 
 const Layout = ({ children }) => {
   return (
-    <Flex fontFamily='Poppins' fontWeight='normal' h='100vh' direction='column'>
+    <Flex h='100vh' direction='column'>
       <Header />
       <Box as='main' flex='1'>
         {children}
