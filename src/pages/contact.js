@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Box, SimpleGrid, Divider } from '@chakra-ui/react';
+import { Box, SimpleGrid } from '@chakra-ui/react';
 import BannerBox from '../components/banner/BannerBox';
 import GoogleMap from '../components/googlemap/GoogleMap';
 import ContactDetails from '../components/contactdetails/ContactDetails';
