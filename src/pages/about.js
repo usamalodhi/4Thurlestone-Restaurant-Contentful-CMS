@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import { SimpleGrid, Text, Center, VStack, Link } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
 import BannerBox from '../components/banner/BannerBox';
 
 const AboutPage = ({ data }) => {
@@ -52,7 +51,7 @@ const AboutPage = ({ data }) => {
               href='https://www.google.com/maps/place/4+Thurlestone/@51.3951872,-0.4484858,15z/data=!4m7!3m6!1s0x0:0x3b8beecae7dadc67!8m2!3d51.395187!4d-0.448488!9m1!1b1'
               isExternal
             >
-              Google Reviews <ExternalLinkIcon mx='2px' />
+              Google Reviews
             </Link>
           </Text>
         </Center>
