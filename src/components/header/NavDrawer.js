@@ -11,9 +11,11 @@ import {
   useDisclosure,
   Button,
   Box,
+  Image,
   Flex,
 } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
+// import { HamburgerIcon } from '@chakra-ui/icons';
+import HamburgerIcon from '../../images/menu.svg';
 
 const NavDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -22,7 +24,7 @@ const NavDrawer = () => {
   return (
     <Box background='black'>
       <Button ref={btnRef} onClick={onOpen}>
-        <HamburgerIcon color='black' fill='black' />
+        <Image>{HamburgerIcon}</Image>
       </Button>
       <Drawer background='black' placement='right' size='full' isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay />
