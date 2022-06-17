@@ -35,27 +35,32 @@ const Footer = () => {
     <Flex
       as='footer'
       __css={styles}
-      justifyContent='space-between'
-      justifyItems='left'
       alignItems={isLargerThan450 ? 'baseline' : 'center'}
       textAlign={isLargerThan450 ? 'left' : 'center'}
-      rowGap='16px'
-      style={{ flexDirection: isLargerThan450 ? 'row' : 'column' }}
+      flexDirection={isLargerThan450 ? 'row' : 'column'}
     >
-      <Flex as='address' direction='column' fontStyle='normal'>
-        <Text as='h2' fontWeight='bold'>
+      <Flex as='address' fontStyle='normal' direction='column' pr={isLargerThan450 ? '24px' : null}>
+        <Text as='h2' fontSize='1rem' fontWeight='bold'>
           {restaurantTitle}
         </Text>
-        <Text as='p'>{addressLineOne}</Text>
-        <Text as='p'>{addressLineTwo}</Text>
-        <Text as='p'>{addressLineThree}</Text>
+        <Text as='p' fontSize='1rem'>
+          {addressLineOne}
+        </Text>
+        <Text as='p' fontSize='1rem'>
+          {addressLineTwo}
+        </Text>
+        <Text as='p' fontSize='1rem'>
+          {addressLineThree}
+        </Text>
       </Flex>
       <Flex direction='column'>
-        <Text as='h2' fontWeight='bold'>
+        <Text as='h2' fontSize='1rem' fontWeight='bold'>
           {openingHoursTitle}
         </Text>
-        <Text as='p'>{openingHoursCafe}</Text>
-        <Text as='p' mb='16px'>
+        <Text as='p' fontSize='1rem' textStyle='Footer'>
+          {openingHoursCafe}
+        </Text>
+        <Text as='p' fontSize='1rem' textStyle='Footer' mb='16px'>
           {openingHoursEvening}
         </Text>
         <FollowSocial />

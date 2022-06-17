@@ -14,7 +14,6 @@ import {
   Image,
   Flex,
 } from '@chakra-ui/react';
-// import { HamburgerIcon } from '@chakra-ui/icons';
 import HamburgerIcon from '../../images/menu.svg';
 
 const NavDrawer = () => {
@@ -23,8 +22,8 @@ const NavDrawer = () => {
 
   return (
     <Box background='black'>
-      <Button ref={btnRef} onClick={onOpen}>
-        <Image>{HamburgerIcon}</Image>
+      <Button p='0' m='0' ref={btnRef} onClick={onOpen}>
+        <Image src={HamburgerIcon} width='20px' height='20px' />
       </Button>
       <Drawer background='black' placement='right' size='full' isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay />
