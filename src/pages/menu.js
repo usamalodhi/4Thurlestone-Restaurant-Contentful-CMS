@@ -50,7 +50,7 @@ const MenuPage = ({ data }) => {
             Dessert
           </Tab>
           <Tab _selected={menuTabStyles} _active={menuTabStyles} _hover={menuTabStylesHover}>
-            Fixed
+            Set
           </Tab>
         </TabList>
 
@@ -110,6 +110,11 @@ const MenuPage = ({ data }) => {
           </TabPanel>
           <TabPanel p='0'>
             <Flex direction='column' pb='8px'>
+              <Flex justifyContent='center' alignItems='center' direction='column' pb='8px' fontWeight='bold'>
+                <Text>Two Course £28.00</Text>
+                <Text>Three Course £40.00</Text>
+              </Flex>
+
               <Text fontWeight='bold' pb='8px'>
                 Starter
               </Text>

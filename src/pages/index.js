@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
         <Flex backgroundColor='rgba(0,0,0,0.5)' h='100vh'>
           <Flex direction='column' height='min-content' padding='16px' margin='auto auto'>
             <Box>
-              <Text as='h2' textStyle='BannerBox' layerStyle='homePageTitle'>
+              <Text as='h2' textStyle='homePageSubTitle' layerStyle='homePageTitle'>
                 {heroSloganOne}
               </Text>
             </Box>
@@ -37,15 +37,15 @@ const IndexPage = ({ data }) => {
               </Text>
             </Box>
             <Box>
-              <Text as='h2' textStyle='BannerBox' layerStyle='homePageTitle'>
+              <Text as='h2' textStyle='homePageSubTitle' layerStyle='homePageTitle'>
                 {heroSloganTwo}
               </Text>
             </Box>
           </Flex>
         </Flex>
       </BgImage>
-      <Box>
-        <Box h='70vh'>
+      <Box backgroundColor='brand.primary'>
+        <Box h='40vh' pl='24px' pr='24px'>
           <Swiper
             style={{
               width: '100%',
@@ -67,9 +67,13 @@ const IndexPage = ({ data }) => {
               return (
                 <SwiperSlide key={data.newsItemName}>
                   <Flex layerStyle='SwiperSlide'>
-                    <Box>
-                      <Text>{data.newsItemName}</Text>
-                      <Text w='70ch'>{data.newsItemDescription}</Text>
+                    <Box color='brand.darkGrey' w='70ch'>
+                      <Text as='h2' fontWeight='bold' w='100%'>
+                        {data.newsItemName}
+                      </Text>
+                      <Text as='p' w='100%'>
+                        {data.newsItemDescription}
+                      </Text>
                     </Box>
                   </Flex>
                 </SwiperSlide>
