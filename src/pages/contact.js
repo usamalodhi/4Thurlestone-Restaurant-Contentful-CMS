@@ -13,7 +13,7 @@ const ContactPage = ({ data }) => {
         altText={'Contact 4 Thurelstone, for those in search of location, direction, or general and business enquiries'}
         bannerLabel={'contact'}
       />
-      <SimpleGrid minChildWidth='400px' spacingX='24px' spacingY='24px'>
+      <SimpleGrid backgroundColor='brand.primary' minChildWidth='320px' spacingX='24px' spacingY='24px'>
         <Box>
           <GoogleMap />
         </Box>
