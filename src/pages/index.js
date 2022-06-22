@@ -45,6 +45,12 @@ const IndexPage = ({ data }) => {
         </Flex>
       </BgImage>
       <Box backgroundColor='brand.primary'>
+        <Flex alignItems='center' justifyContent='center'>
+          <Box>
+            <Text as='h2'>Latest News</Text>
+          </Box>
+        </Flex>
+
         <Box h='40vh' pl='24px' pr='24px'>
           <Swiper
             style={{
