@@ -18,10 +18,10 @@ const AboutPage = ({ data }) => {
         bannerLabel={'about'}
       />
 
-      <SimpleGrid minChildWidth='400px' background='brand.primary' color='brand.darkGrey' pb='24px'>
+      <SimpleGrid minChildWidth='320px' background='brand.primary' color='brand.darkGrey' pb='24px'>
         <VStack padding='24px 24px' margin='auto 0'>
           <Text fontWeight='bold'>Sokol Petriti</Text>
-          <Text maxWidth='60ch' textAlign='left'>
+          <Text maxWidth='65ch' textAlign='left'>
             {aboutPageTextOne}
           </Text>
         </VStack>
@@ -35,7 +35,7 @@ const AboutPage = ({ data }) => {
         </Center>
       </SimpleGrid>
 
-      <SimpleGrid background='brand.primary' color='brand.darkGrey' minChildWidth='400px'>
+      <SimpleGrid background='brand.primary' color='brand.darkGrey' minChildWidth='320px'>
         <Center>
           <GatsbyImage
             style={{ width: '100%', height: '100%' }}
@@ -44,14 +44,28 @@ const AboutPage = ({ data }) => {
             alt='test'
           />
         </Center>
-        <Center padding='24px 24px' direction='column'>
-          <VStack>
-            <Text fontWeight='bold'>4 Thurlestone</Text>
-            <Text maxWidth='60ch' textAlign='left'>
-              {aboutPageTextTwo}
-            </Text>
-          </VStack>
-        </Center>
+        <VStack padding='24px 24px'>
+          <Text fontWeight='bold'>4 Thurlestone</Text>
+          <Text maxWidth='65ch' textAlign='left'>
+            {aboutPageTextTwo} <br /> Take a look at how much our customers enjoyed their visit by reading stellar
+            reviews on{' '}
+            <Link
+              fontWeight='bold'
+              href='https://www.tripadvisor.co.uk/Restaurant_Review-g528815-d24110145-Reviews-4_Thurlestone-Shepperton_Surrey_England.html'
+              isExternal
+            >
+              Tripadvisor{' '}
+            </Link>
+            and{' '}
+            <Link
+              fontWeight='bold'
+              href='https://www.google.com/maps/place/4+Thurlestone/@51.3951871,-0.4529705,17z/data=!4m7!3m6!1s0x4876752258168c4d:0x3b8beecae7dadc67!8m2!3d51.395187!4d-0.448488!9m1!1b1'
+              isExternal
+            >
+              Google.
+            </Link>
+          </Text>
+        </VStack>
       </SimpleGrid>
     </>
   );
@@ -66,9 +80,6 @@ export const data = graphql`
         }
         aboutPageTextTwo {
           aboutPageTextTwo
-        }
-        aboutPageTextThree {
-          aboutPageTextThree
         }
         aboutPageImageChef {
           gatsbyImageData(
