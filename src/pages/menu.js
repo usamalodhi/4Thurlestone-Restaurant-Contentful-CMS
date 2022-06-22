@@ -12,6 +12,7 @@ import {
   Flex,
   Spacer,
   Text,
+  Divider,
 } from '@chakra-ui/react';
 import BannerBox from '../components/banner/BannerBox';
 
@@ -55,7 +56,7 @@ const MenuPage = ({ data }) => {
         </TabList>
 
         <TabPanels p='24px'>
-          <TabPanel p='0'>
+          <TabPanel>
             <SimpleGrid minChildWidth='300px' spacingX='16px'>
               <List>
                 {teaMenu.map(({ name, price }) => (
@@ -81,7 +82,7 @@ const MenuPage = ({ data }) => {
               </List>
             </SimpleGrid>
           </TabPanel>
-          <TabPanel p='0'>
+          <TabPanel>
             <List>
               {dailySpecialsMenu.map(({ name, price }) => (
                 <ListItem pb='8px' key={name}>
@@ -94,8 +95,7 @@ const MenuPage = ({ data }) => {
               ))}
             </List>
           </TabPanel>
-
-          <TabPanel p='0'>
+          <TabPanel>
             <List>
               {dessertsMenu.map(({ name, price }) => (
                 <ListItem pb='8px' key={name}>
@@ -108,14 +108,14 @@ const MenuPage = ({ data }) => {
               ))}
             </List>
           </TabPanel>
-          <TabPanel p='0'>
-            <Flex direction='column' pb='8px'>
-              <Flex justifyContent='center' alignItems='center' direction='column' pb='8px' fontWeight='bold'>
+          <TabPanel>
+            <Flex direction='column'>
+              <Flex justifyContent='center' alignItems='center' direction='column' fontWeight='bold'>
                 <Text>Two Course £28.00</Text>
                 <Text>Three Course £40.00</Text>
               </Flex>
 
-              <Text fontWeight='bold' pb='8px'>
+              <Text pt='24px' fontWeight='bold'>
                 Starter
               </Text>
               <List>
@@ -127,9 +127,10 @@ const MenuPage = ({ data }) => {
                   </ListItem>
                 ))}
               </List>
+              <Divider p='8px 0px' />
             </Flex>
             <Flex direction='column' pb='8px'>
-              <Text fontWeight='bold' pb='8px'>
+              <Text pt='24px' fontWeight='bold'>
                 Main Course
               </Text>
               <List>
@@ -142,8 +143,9 @@ const MenuPage = ({ data }) => {
                 ))}
               </List>
             </Flex>
+            <Divider p='8px 0px' />
             <Flex direction='column' pb='8px'>
-              <Text fontWeight='bold' pb='8px'>
+              <Text pt='24px' pb='8px' fontWeight='bold'>
                 Dessert
               </Text>
               <List>
@@ -156,39 +158,54 @@ const MenuPage = ({ data }) => {
                 ))}
               </List>
             </Flex>
+            <Divider p='8px 0px' />
+
+            <Flex pt='24px' justifyContent='center' alignItems='center' direction='column' fontWeight='bold'>
+              <Text>Wine List</Text>
+            </Flex>
+
             <Flex direction='column' pb='8px'>
-              <Text fontWeight='bold' pb='8px'>
+              <Text pt='24px' pb='8px' fontWeight='bold'>
                 Red
               </Text>
               <List>
                 {redWineList.map(({ name, strength, description, bottlePrice, priceGlassSmall, priceGlassLarge }) => (
                   <ListItem pb='8px' key={name}>
                     <Flex direction='column'>
-                      <Text fontStyle='italic'>{name}</Text>
-                      <Text>{strength}</Text>
-                      <Text>{description}</Text>
-                      <Text>{bottlePrice}</Text>
-                      <Text>{priceGlassSmall}</Text>
-                      <Text>{priceGlassLarge}</Text>
+                      <Text pb='8px'>
+                        <Text as='span'>{name}, </Text>
+                        <Text as='span' fontStyle='italic'>
+                          {strength}
+                        </Text>
+                      </Text>
+                      <Text pb='8px'>{description}</Text>
+                      <Text pb='8px'>
+                        {priceGlassSmall} {priceGlassLarge} {bottlePrice}
+                      </Text>
                     </Flex>
                   </ListItem>
                 ))}
               </List>
             </Flex>
+            <Divider p='8px 0px' />
             <Flex direction='column' pb='8px'>
-              <Text fontWeight='bold' pb='8px'>
+              <Text pt='24px' pb='8px' fontWeight='bold'>
                 White
               </Text>
               <List>
                 {whiteWineList.map(({ name, strength, description, bottlePrice, priceGlassSmall, priceGlassLarge }) => (
                   <ListItem pb='8px' key={name}>
                     <Flex direction='column'>
-                      <Text fontStyle='italic'>{name}</Text>
-                      <Text>{strength}</Text>
-                      <Text>{description}</Text>
-                      <Text>{bottlePrice}</Text>
-                      <Text>{priceGlassSmall}</Text>
-                      <Text>{priceGlassLarge}</Text>
+                      <Text pb='8px'>
+                        <Text as='span'>{name}, </Text>
+                        <Text as='span' fontStyle='italic'>
+                          {strength}
+                        </Text>
+                      </Text>
+                      <Text pb='8px'>{description}</Text>
+                      <Text pb='8px'>
+                        {priceGlassSmall} {priceGlassLarge} {bottlePrice}
+                      </Text>
                     </Flex>
                   </ListItem>
                 ))}
