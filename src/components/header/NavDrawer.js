@@ -22,8 +22,8 @@ const NavDrawer = () => {
 
   return (
     <Box background='black'>
-      <Button p='0' m='0' ref={btnRef} onClick={onOpen}>
-        <Image src={HamburgerIcon} width='20px' height='20px' />
+      <Button p='0' m='0' backgroundColor='brand.primary' ref={btnRef} onClick={onOpen}>
+        <Image src={HamburgerIcon} w='20px' h='20px' />
       </Button>
       <Drawer background='black' placement='right' size='full' isOpen={isOpen} onClose={onClose}>
         <DrawerOverlay />

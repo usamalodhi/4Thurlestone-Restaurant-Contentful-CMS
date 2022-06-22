@@ -7,19 +7,18 @@ import { motion } from 'framer-motion';
 const NavBar = ({ onClose }) => {
   const styles = useStyleConfig('NavBar');
 
-  const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
+  const [isLargerThan630] = useMediaQuery('(min-width: 630px)');
   return (
     <Box as='nav'>
-      <UnorderedList flexDirection={isLargerThan600 ? 'row' : 'column'} listStyleType='none' __css={styles}>
+      <UnorderedList flexDirection={isLargerThan630 ? 'row' : 'column'} listStyleType='none' __css={styles}>
         {navLinks.map(({ id, to, label }) => (
           <ListItem key={id}>
             <Link onClick={onClose} to={to}>
               <Text
                 as={motion.p}
+                textStyle='siteLinks'
                 whileHover={{ y: -5.0, color: '#FFFFFF', scale: 1.1 }}
                 transition='0.1s linear'
-                fontSize={{ base: '16px' }}
-                textAlign='right'
               >
                 {label}
               </Text>

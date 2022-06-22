@@ -7,7 +7,7 @@ import Logo from './Logo';
 const Header = () => {
   const styles = useStyleConfig('Header');
 
-  const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
+  const [isLargerThan630] = useMediaQuery('(min-width: 630px)');
   return (
     <Box
       as='header'
@@ -20,7 +20,7 @@ const Header = () => {
       __css={styles}
     >
       <Logo />
-      {isLargerThan600 ? <NavLinks /> : <NavDrawer />}
+      {isLargerThan630 ? <NavLinks /> : <NavDrawer />}
     </Box>
   );
 };
