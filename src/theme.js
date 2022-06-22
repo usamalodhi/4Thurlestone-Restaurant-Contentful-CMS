@@ -52,15 +52,19 @@ const theme = extendTheme({
       },
 
       h1: {
-        fontSize: ['1.5rem', '1.5rem', '1.5rem', '1.5rem', '2rem', '2rem', '2rem'],
+        fontSize: ['1.5rem', '1.5rem', '1.5rem', '1.5rem', '2rem', '2rem'],
         fontWeight: 'bold',
       },
       h2: {
-        fontSize: ['1.25rem', '1.25rem', '1.25rem', '1.25rem', '1.5rem', '1.5rem', '1.5rem'],
+        fontSize: ['1.25rem', '1.25rem', '1.25rem', '1.25rem', '1.5rem', '1.5rem'],
         fontWeight: 'bold',
       },
       p: {
-        fontSize: ['1rem', '1rem', '1rem', '1rem', '1.25rem', '1.25rem', '1.25rem'],
+        fontSize: ['1rem', '1rem', '1rem', '1rem', '1.25rem', '1.25rem'],
+      },
+      '.chakra-divider': {
+        borderColor: 'black !important',
+        opacity: 1,
       },
     },
   },
@@ -92,28 +96,41 @@ const theme = extendTheme({
     SwiperSlide: {
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center',
+      alignItems: 'top',
       height: '100%',
       textAlign: 'left',
+      paddingTop: '24px',
     },
   },
   textStyles: {
     homePageTitle: {
-      fontSize: ['1.5rem', '1.5rem', '1.5rem', '2rem', '3rem', '4rem', '5rem'],
+      // breakpoints: ['<320px', '320px', 425px, 768px, 1024px, 1440px],
+      fontSize: ['2rem', '2rem', '3rem', '5rem', '6rem', '8rem'],
       fontWeight: 'bold',
       lineHeight: '150%',
       textAlign: 'justify',
     },
     homePageSubTitle: {
-      fontSize: ['1rem', '1rem', '1rem', '1rem', '1.5rem', '2rem', '2.5rem'],
+      // breakpoints: ['<320px', '320px', 425px, 768px, 1024px, 1440px]
+      fontSize: ['1rem', '1rem', '1.5rem', '2.5rem', '3rem', '4rem'],
       fontWeight: 'bold',
       lineHeight: '150%',
       textAlign: 'justify',
     },
 
+    // fontWeight='bold' letterSpacing='0.313em'
+
     Logo: {
-      fontSize: ['1rem', '1rem', '1rem', '1rem', '1.5rem', '2rem', '2.5rem'],
+      // breakpoints: ['<320px', '320px', 425px, 768px, 1024px, 1440px]
+      fontSize: ['1.25rem', '1.25rem', '1.25rem', '1.25rem', '1.25rem', '1.25rem'],
       fontWeight: 'bold',
+      letterSpacing: '0.313em',
+    },
+    siteLinks: {
+      // breakpoints: ['<320px', '320px', 425px, 768px, 1024px, 1440px]
+      fontSize: ['1rem', '1rem', '1rem', '1rem', '1rem', '1rem'],
+      // letterSpacing: '0.313em',
+      textAlign: 'right',
     },
     Footer: {
       fontSize: '1rem',
@@ -122,11 +139,11 @@ const theme = extendTheme({
   breakpoints: {
     sm: '320px',
     md: '425px',
-    lg: '768px',
+    lg: '700px',
     xl: '1024px',
     '2xl': '1440px',
-    '3xl': '1536px',
   },
 });
 
 export default theme;
+// breakpoints: ['<320px', '320px', 425px, 768px, 1024px, 1440px, 1536px],
